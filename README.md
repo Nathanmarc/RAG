@@ -175,10 +175,4 @@ EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
 
 ---
 
-## Version & Support
-
-**Version:** 1.0.0  
-**Last Updated:** November 2025  
-
-For issues or questions, check the documentation or create an issue on GitHub.</content>
-<parameter name="filePath">c:\Users\Nathan\Downloads\ko\README.md
+ENjoy!!!!!!!!!!!!!!!!
