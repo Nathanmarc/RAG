@@ -178,7 +178,7 @@ Edge deployment constraints for T4:
 # -------------------------------------------------------
 def query_rag(query_text=None):
 
-    print("\n🤖 Querying RAG Engine...\n")
+    print("\n Querying RAG Engine...\n")
 
     retriever = Retriever()
     llm = LLMClient()
@@ -192,11 +192,11 @@ def query_rag(query_text=None):
         try:
             q = input("\nYour question: ").strip()
         except EOFError:
-            print("❌ No input available! Use:  --query \"your question\"")
+            print(" No input available! Use:  --query \"your question\"")
             return
 
         if not q:
-            print("❗ Please type a question.")
+            print(" Please type a question.")
             continue
 
         run_query(retriever, llm, q)
@@ -208,7 +208,7 @@ def query_rag(query_text=None):
 def run_query(retriever, llm, q):
     # Timing
     start = time.time()
-    print(f"⏱️  Retrieving documents...")
+    print(f" Retrieving documents...")
     
     # Retrieve documents
     docs, metas = retriever.retrieve(q, top_k=3)
@@ -217,7 +217,7 @@ def run_query(retriever, llm, q):
     print(f"✓ Retrieved in {retrieval_time:.2f}s")
     
     if not docs:
-        print("\n❌ No relevant results found.\n")
+        print("\n No relevant results found.\n")
         return
     
     # Use only first document to keep prompt short
@@ -250,12 +250,13 @@ def main():
     elif args.query:
         query_rag(args.query)
     else:
-        print("\n❗ Please provide a command:")
+        print("\n Please provide a command:")
         print("   --build                    Rebuild vector DB")
         print("   --query \"your question\"   Query the RAG engine\n")
 
 
 if __name__ == "__main__":
     main()
+
 
 
