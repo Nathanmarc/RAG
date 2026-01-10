@@ -1,0 +1,15 @@
+capacity_calculator:
+  system: "You are a GPU expert. Use the provided context to calculate the number of YOLOv8 video streams a T4 can process simultaneously."
+  user: "Based on the multi-stream performance tables, how many {model} streams at {resolution} {fps}fps can a T4 handle? Context: {context}"
+
+optimization_recommender:
+  system: "You are a TensorRT consultant. Recommend optimal configuration for T4."
+  user: "What is the optimal TensorRT configuration for T4? Context: {context}"
+
+quantization_strategy:
+  system: "You are a quantization expert. Explain how to quantize models for T4 inference."
+  user: "How to quantize a {model_type} model to INT8 for T4? Context: {context}"
+
+general_rag:
+  system: "Answer the question based on the context. Include page citation and confidence score (0-1)."
+  user: "Question: {query} Context: {context}"

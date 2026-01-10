@@ -1,0 +1,61 @@
+# Minimal requirements for GPU Knowledge Base RAG System
+# Compatible with Python 3.14
+
+# Core Dependencies
+langchain>=0.1.0
+langchain-community>=0.0.10
+
+# API Framework
+fastapi>=0.109.0
+uvicorn>=0.24.0
+pydantic>=2.5.0
+slowapi>=0.1.9
+
+# Frontend
+streamlit>=1.29.0
+
+# PDF Processing
+pdfplumber>=0.10.0
+PyPDF2>=3.0.0
+pandas>=2.2.0
+numpy>=2.0.0
+
+# LLM & NLP
+transformers>=4.40.0
+torch>=2.2.0
+accelerate>=0.27.0
+openai>=1.10.0
+scikit-learn>=1.4.0
+
+# Embeddings & Retrieval
+sentence-transformers>=5.0.0
+requests>=2.31.0
+
+# MLOps & Experiment Tracking
+mlflow>=2.10.0
+dvc>=3.35.0
+
+# Monitoring & Metrics
+prometheus-client>=0.19.0
+
+# Utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+aiohttp>=3.9.0
+
+# Development & Testing
+pytest>=7.4.3
+pytest-cov>=4.1.0
+pytest-asyncio>=0.23.0
+black>=24.1.0
+flake8>=6.1.0
+isort>=5.13.2
+
+# Logging
+structlog>=23.3.0
+
+# Note: The following are not available for Python 3.14 yet:
+# - chromadb (uses pulsar-client)
+# - onnxruntime
+# - faiss-cpu
+# These components can be optional or version-locked to Python 3.11-3.13

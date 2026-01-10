@@ -1,0 +1,65 @@
+# Core Dependencies
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-text-splitters>=0.0.1
+langchain-huggingface>=0.0.1
+langchain-ollama>=0.1.0
+
+# Vector Database & Embeddings
+# Using FAISS instead of chromadb (chromadb requires pulsar-client which has compatibility issues)
+sentence-transformers>=5.0.0
+faiss-cpu>=1.13.0
+
+# PDF Processing
+pdfplumber==0.10.3
+PyPDF2==3.0.1
+pandas>=2.2.0
+numpy>=2.0.0
+
+# LLM & NLP
+transformers>=4.40.0
+torch>=2.2.0
+accelerate>=0.27.0
+openai>=1.10.0
+scikit-learn>=1.4.0
+
+# API Framework
+fastapi>=0.109.0
+uvicorn>=0.24.0
+pydantic>=2.5.0
+slowapi>=0.1.9
+
+# Frontend
+streamlit>=1.29.0
+
+# MLOps & Experiment Tracking
+mlflow>=2.10.0
+dvc>=3.35.0
+
+# Monitoring & Metrics
+prometheus-client>=0.19.0
+
+# Utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# Development & Testing
+pytest>=7.4.3
+pytest-cov>=4.1.0
+pytest-asyncio>=0.23.0
+black>=24.1.0
+flake8>=6.1.0
+isort>=5.13.2
+
+# Logging
+structlog>=23.3.0
+
+# Optional: GPU Optimization
+# onnx>=1.15.0
+# onnxruntime requires Python 3.13 or earlier
+# Note: Install these manually if needed for your Python version
+
+
+

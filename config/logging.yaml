@@ -1,0 +1,81 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  standard:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  detailed:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(pathname)s:%(lineno)d - %(funcName)s() - %(message)s'
+  json:
+    format: '{"timestamp": "%(asctime)s", "logger": "%(name)s", "level": "%(levelname)s", "message": "%(message)s", "path": "%(pathname)s"}'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: standard
+    stream: ext://sys.stdout
+  
+  file:
+    class: logging.FileHandler
+    level: INFO
+    formatter: detailed
+    filename: logs/app.log
+  
+  file_json:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: json
+    filename: logs/app.json.log
+  
+  error_file:
+    class: logging.FileHandler
+    level: ERROR
+    formatter: detailed
+    filename: logs/errors.log
+  
+  query_file:
+    class: logging.FileHandler
+    level: INFO
+    formatter: json
+    filename: logs/queries.log
+
+loggers:
+  main:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+  
+  rag_engine:
+    level: INFO
+    handlers: [console, file]
+    propagate: false
+  
+  retriever:
+    level: INFO
+    handlers: [console, file]
+    propagate: false
+  
+  llm_client:
+    level: INFO
+    handlers: [console, file]
+    propagate: false
+  
+  api:
+    level: INFO
+    handlers: [console, file]
+    propagate: false
+  
+  queries:
+    level: INFO
+    handlers: [query_file]
+    propagate: false
+  
+  errors:
+    level: ERROR
+    handlers: [error_file, console]
+    propagate: false
+
+root:
+  level: INFO
+  handlers: [console, file, error_file]
