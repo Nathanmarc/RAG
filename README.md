@@ -16,7 +16,7 @@ This is a complete MLOps system that transforms GPU product documentation (PDF d
 - **Production-Ready**: Docker, Docker Compose, and Kubernetes-ready deployment
 - **CI/CD Automation**: GitHub Actions for automated testing and deployment
 
-### Supported Query Types
+### Example Query Types
 
 - **Video Analytics Capacity**: "How many YOLOv8 video streams can T4 process simultaneously?"
 - **Quantization Guidance**: "How to quantize my model to INT8 for T4 inference?"
@@ -54,7 +54,7 @@ The system follows a layered architecture with clear separation of concerns:
 
 ---
 
-## 📋 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -175,4 +175,4 @@ EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
 
 ---
 
-ENjoy!!!!!!!!!!!!!!!!
+This thing barely works. 
